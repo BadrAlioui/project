@@ -1,5 +1,9 @@
 
 from pathlib import Path
+import os
+import django_heroku
+from decouple import config
+import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -9,6 +13,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
+SECRET_KEY = config('SECRET_KEY')
 SECRET_KEY = 'django-insecure-y^piz@tgo504eh8pvk+llxj*c@%y$@^v8rbrtljen6w^xi%(nh'
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -31,6 +36,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -107,7 +113,15 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
+STATICFILES = [
+    os.path.join(BASE_DIR, 'static')
+]
+
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+django_heroku.settings(locals())
