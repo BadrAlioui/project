@@ -36,7 +36,11 @@
                     <div class="collapse navbar-collapse" id="navbarColor01">
                         <ul class="navbar-nav me-auto">
                             <li class="nav-item">
-                                <a class="nav-link active" href="#">Home</a>
+                                <a
+                                    class="nav-link active"
+                                    href="{% url 'home' %}"
+                                    >Home</a
+                                >
                             </li>
                             <li class="nav-item dropdown">
                                 <a
@@ -104,7 +108,10 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a class="dropdown-item" href="#">
+                                        <a
+                                            class="dropdown-item"
+                                            href="{% url 'login' %}"
+                                        >
                                             Login
                                         </a>
                                     </li>
