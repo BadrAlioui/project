@@ -27,3 +27,4 @@ def contact(request):
                 request, "Your message has been sent successfully!")
             return redirect('contact')
     return render(request, 'contact.html', {'form': form})
+

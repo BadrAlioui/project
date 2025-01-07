@@ -1,5 +1,4 @@
-{% extends 'base.html' %} 
-{% block content %}
+{% extends 'base.html' %} {% block content %}
 <section class="py-4 text-center container">
     <div class="row py-lg-5">
         <div class="col-lg-6 col-md-8 mx-auto">
@@ -7,11 +6,9 @@
             <br />
             <p class="lead text-muted">Browse our extensive collection ...</p>
             <br />
-            <a
-                href="#"
-                type="button"
-                class="btn btn-primary btn-md my-2"
-                >Create an account</a>
+            <a href="#" type="button" class="btn btn-primary btn-md my-2"
+                >Create an account</a
+            >
         </div>
     </div>
 </section>
@@ -24,7 +21,7 @@
         </a>
     </div>
     {% endif %}
-    
+
     <br />
     <hr />
     <div class="row">
@@ -40,29 +37,30 @@
                 </a>
                 <div class="card-body">
                     <h5 class="card-text">
-                        <a
-                            href="#"
-                            class="text-decoration-none text-dark"
-                            >{{ product.description|truncatewords:5 }}...</a>
+                        <a href="#" class="text-decoration-none text-dark"
+                            >{{ product.description|truncatewords:5 }}...</a
+                        >
                     </h5>
                     <h6>${{product.price}}</h6>
                     {% if product.rating %}
                     <small class="text-muted"
-                        ><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
+                        ><i class="fas fa-star mr-1"></i>{{ product.rating }} /
+                        5</small
+                    >
                     {% else %}
                     <small class="text-muted">No Rating</small>
                     {% endif %}
                 </div>
                 {% if request.user.is_superuser %}
-<div class="card-footer d-flex justify-content-between">
-    <a href="#" class="btn btn-warning btn-sm">
-        <i class="fas fa-edit"></i> Edit
-    </a>
-    <a href="#" class="btn btn-danger btn-sm">
-        <i class="fas fa-trash"></i> Delete
-    </a>
-</div>
-{% endif %}
+                <div class="card-footer d-flex justify-content-between">
+                    <a href="#" class="btn btn-warning btn-sm">
+                        <i class="fas fa-edit"></i> Edit
+                    </a>
+                    <a href="#" class="btn btn-danger btn-sm">
+                        <i class="fas fa-trash"></i> Delete
+                    </a>
+                </div>
+                {% endif %}
             </div>
         </div>
         {% endfor %}
