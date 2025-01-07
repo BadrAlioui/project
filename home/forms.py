@@ -11,4 +11,3 @@ class ContactForm(forms.Form):
         fields = ['name', 'email', 'message']
 
     
-      

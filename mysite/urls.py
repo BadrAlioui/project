@@ -8,7 +8,7 @@ urlpatterns = [
     path('', include('home.urls')),
     path('store/', include('store.urls')),
     path('auth/', include('authenticate.urls')),
-    path('contact/', views.contact, name = 'contact'), 
+    
 
 
 ]

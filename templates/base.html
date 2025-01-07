@@ -97,16 +97,17 @@
                                             My Profile
                                         </a>
                                     </li>
+
+                                    {% if user.is_authenticated %}
                                     <li>
-                                        <a class="dropdown-item" href="#">
+                                        <a
+                                            class="dropdown-item"
+                                            href="{% url 'logout' %}"
+                                        >
                                             Logout
                                         </a>
                                     </li>
-                                    <li>
-                                        <a class="dropdown-item" href="#">
-                                            Register
-                                        </a>
-                                    </li>
+                                    {% else %}
                                     <li>
                                         <a
                                             class="dropdown-item"
@@ -115,6 +116,15 @@
                                             Login
                                         </a>
                                     </li>
+                                    <li>
+                                        <a
+                                            class="dropdown-item"
+                                            href="{% url 'register' %}"
+                                        >
+                                            Register
+                                        </a>
+                                    </li>
+                                    {% endif %}
                                 </ul>
                             </li>
                         </ul>
