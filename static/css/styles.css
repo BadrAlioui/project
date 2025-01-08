@@ -10,6 +10,7 @@ body {
 }
 
 .homepage-main {
+    background: url('/static/media/images/background-image.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -26,7 +27,6 @@ body {
 }
 
 .container-fluid {
-    background: url('/static/media/images/background-image.jpg');
 }
 
 .contact-page form {
