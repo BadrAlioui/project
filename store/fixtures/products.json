@@ -1,0 +1,92 @@
+[
+    {
+        "model": "store.product",
+        "pk": 1,
+        "fields": {
+            "category": 1,
+            "title": "Thriller Novel",
+            "brand": "Unbranded",
+            "description": "A gripping thriller that keeps you on the edge of your seat.",
+            "slug": "thriller-novel",
+            "rating": 4.2,
+            "price": "14.99",
+            "image": null,
+            "stock": 50
+        }
+    },
+    {
+        "model": "store.product",
+        "pk": 2,
+        "fields": {
+            "category": 1,
+            "title": "Cooking Recipe Book",
+            "brand": "Unbranded",
+            "description": "Delicious recipes for home chefs.",
+            "slug": "cooking-recipe-book",
+            "rating": 4.6,
+            "price": "24.99",
+            "image": null,
+            "stock": 40
+        }
+    },
+    {
+        "model": "store.product",
+        "pk": 3,
+        "fields": {
+            "category": 1,
+            "title": "Science Fiction Novel",
+            "brand": "Unbranded",
+            "description": "Explore the future with this fascinating sci-fi novel.",
+            "slug": "science-fiction-novel",
+            "rating": 4.8,
+            "price": "19.99",
+            "image": null,
+            "stock": 60
+        }
+    },
+    {
+        "model": "store.product",
+        "pk": 4,
+        "fields": {
+            "category": 2,
+            "title": "Men's T-Shirt",
+            "brand": "FashionWear",
+            "description": "Comfortable cotton T-shirt for men.",
+            "slug": "mens-tshirt",
+            "rating": 4.3,
+            "price": "19.99",
+            "image": null,
+            "stock": 100
+        }
+    },
+    {
+        "model": "store.product",
+        "pk": 5,
+        "fields": {
+            "category": 2,
+            "title": "Women's Dress",
+            "brand": "StylePro",
+            "description": "Elegant evening dress for women.",
+            "slug": "womens-dress",
+            "rating": 4.6,
+            "price": "59.99",
+            "image": null,
+            "stock": 20
+        }
+    },
+    {
+        "model": "store.product",
+        "pk": 6,
+        "fields": {
+            "category": 2,
+            "title": "Running Shoes",
+            "brand": "SportsGear",
+            "description": "Lightweight and durable running shoes.",
+            "slug": "running-shoes",
+            "rating": 4.8,
+            "price": "79.99",
+            "image": null,
+            "stock": 40
+        }
+    }
+]

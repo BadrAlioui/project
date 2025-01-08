@@ -1,0 +1,19 @@
+[
+    
+    {
+        "model": "store.category",
+        "pk": 1,
+        "fields": {
+            "name": "Books",
+            "slug": "books"
+        }
+    },
+    {
+        "model": "store.category",
+        "pk": 2,
+        "fields": {
+            "name": "Clothing",
+            "slug": "clothing"
+        }
+    }
+]
